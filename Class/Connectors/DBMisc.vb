@@ -17,6 +17,7 @@ Public Class DBMisc
         Dim table As DataTable = connector.GetData(query, params)
 
         For Each row As DataRow In table.Rows
+
             user = New ActualUser(Convert.ToInt32(row("id")), row("username"))
 
             Return user

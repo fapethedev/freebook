@@ -121,7 +121,7 @@ Public Class LoginForm
                                            Me.Invoke(Sub()
 
                                                          MessageBox.Show("Mot de passe incorrect", "Echec de l'authentification", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
+                                                         PasswordField.Text = ""
                                                      End Sub)
 
                                        End If

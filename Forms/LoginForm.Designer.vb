@@ -120,7 +120,7 @@ Partial Class LoginForm
         UsernameField.AutoCompleteMode = AutoCompleteMode.Suggest
         UsernameField.AutoCompleteSource = AutoCompleteSource.RecentlyUsedList
         UsernameField.BackColor = Color.Transparent
-        UsernameField.BorderRadius = 15
+        UsernameField.BorderRadius = 10
         UsernameField.CustomizableEdges = CustomizableEdges1
         UsernameField.DefaultText = ""
         UsernameField.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
@@ -143,7 +143,7 @@ Partial Class LoginForm
         UsernameField.ShadowDecoration.Color = Color.Silver
         UsernameField.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         UsernameField.ShadowDecoration.Enabled = True
-        UsernameField.Size = New Size(600, 48)
+        UsernameField.Size = New Size(600, 54)
         UsernameField.TabIndex = 0
         ' 
         ' PasswordField
@@ -151,7 +151,7 @@ Partial Class LoginForm
         PasswordField.AutoCompleteMode = AutoCompleteMode.Suggest
         PasswordField.AutoCompleteSource = AutoCompleteSource.RecentlyUsedList
         PasswordField.BackColor = Color.Transparent
-        PasswordField.BorderRadius = 15
+        PasswordField.BorderRadius = 10
         PasswordField.CustomizableEdges = CustomizableEdges3
         PasswordField.DefaultText = ""
         PasswordField.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
@@ -174,7 +174,7 @@ Partial Class LoginForm
         PasswordField.ShadowDecoration.Color = Color.Silver
         PasswordField.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         PasswordField.ShadowDecoration.Enabled = True
-        PasswordField.Size = New Size(600, 48)
+        PasswordField.Size = New Size(600, 54)
         PasswordField.TabIndex = 1
         ' 
         ' ShowPassButton
@@ -207,7 +207,7 @@ Partial Class LoginForm
         ShowPassButton.ShadowDecoration.Color = Color.White
         ShowPassButton.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         ShowPassButton.ShadowDecoration.Enabled = True
-        ShowPassButton.Size = New Size(48, 48)
+        ShowPassButton.Size = New Size(54, 54)
         ShowPassButton.TabIndex = 2
         ' 
         ' LoginButton
