@@ -8,6 +8,10 @@
         Me.username = username
     End Sub
 
+    Public Overrides Function ToString() As String
+        Return username
+    End Function
+
     Public Sub New(username As String)
 
         Me.username = username
@@ -25,5 +29,7 @@
             Return id
         End Get
     End Property
+
+
 
 End Class

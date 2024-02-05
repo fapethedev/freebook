@@ -8,11 +8,11 @@ Public Class DBMisc
 
         Dim user As ActualUser
 
-        Dim query = "SELECT * FROM loans WHERE id = @id"
+        Dim query = "SELECT * FROM users WHERE id = @id"
 
-        Dim params(1) As MySqlParameter
+        Dim params(0) As MySqlParameter
 
-        params(0) = New MySqlParameter("@id", MySqlDbType.DateTime) With {.Value = id}
+        params(0) = New MySqlParameter("@id", MySqlDbType.Int32) With {.Value = id}
 
         Dim table As DataTable = connector.GetData(query, params)
 
@@ -20,10 +20,11 @@ Public Class DBMisc
 
             user = New ActualUser(Convert.ToInt32(row("id")), row("username"))
 
-            Return user
+            'Return user
         Next
 
-        Return Nothing
+        Return user
+        'Return Nothing
 
     End Function
 

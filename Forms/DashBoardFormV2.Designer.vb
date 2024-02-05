@@ -289,6 +289,18 @@ Partial Class DashBoardFormV2
         Guna2TabControl1 = New Guna.UI2.WinForms.Guna2TabControl()
         SumPage = New TabPage()
         SummaryPanel = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2ShadowPanel4 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Label46 = New Label()
+        Label47 = New Label()
+        Guna2ShadowPanel3 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Label44 = New Label()
+        Label45 = New Label()
+        Guna2ShadowPanel2 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Label42 = New Label()
+        Label43 = New Label()
+        Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Label41 = New Label()
+        Label40 = New Label()
         CliPage = New TabPage()
         Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         CliTabControl = New Guna.UI2.WinForms.Guna2TabControl()
@@ -530,6 +542,11 @@ Partial Class DashBoardFormV2
         Guna2Panel1.SuspendLayout()
         Guna2TabControl1.SuspendLayout()
         SumPage.SuspendLayout()
+        SummaryPanel.SuspendLayout()
+        Guna2ShadowPanel4.SuspendLayout()
+        Guna2ShadowPanel3.SuspendLayout()
+        Guna2ShadowPanel2.SuspendLayout()
+        Guna2ShadowPanel1.SuspendLayout()
         CliPage.SuspendLayout()
         Guna2Panel4.SuspendLayout()
         CliTabControl.SuspendLayout()
@@ -685,6 +702,10 @@ Partial Class DashBoardFormV2
         ' 
         SummaryPanel.BackColor = Color.Transparent
         SummaryPanel.BorderRadius = 10
+        SummaryPanel.Controls.Add(Guna2ShadowPanel4)
+        SummaryPanel.Controls.Add(Guna2ShadowPanel3)
+        SummaryPanel.Controls.Add(Guna2ShadowPanel2)
+        SummaryPanel.Controls.Add(Guna2ShadowPanel1)
         SummaryPanel.CustomizableEdges = CustomizableEdges1
         SummaryPanel.Dock = DockStyle.Fill
         SummaryPanel.FillColor = Color.White
@@ -697,6 +718,138 @@ Partial Class DashBoardFormV2
         SummaryPanel.ShadowDecoration.Enabled = True
         SummaryPanel.Size = New Size(1250, 517)
         SummaryPanel.TabIndex = 1
+        ' 
+        ' Guna2ShadowPanel4
+        ' 
+        Guna2ShadowPanel4.BackColor = Color.Transparent
+        Guna2ShadowPanel4.Controls.Add(Label46)
+        Guna2ShadowPanel4.Controls.Add(Label47)
+        Guna2ShadowPanel4.FillColor = Color.White
+        Guna2ShadowPanel4.Location = New Point(843, 314)
+        Guna2ShadowPanel4.Name = "Guna2ShadowPanel4"
+        Guna2ShadowPanel4.ShadowColor = Color.Black
+        Guna2ShadowPanel4.Size = New Size(404, 200)
+        Guna2ShadowPanel4.TabIndex = 3
+        ' 
+        ' Label46
+        ' 
+        Label46.AutoSize = True
+        Label46.Font = New Font("Cooper Black", 36F, FontStyle.Regular, GraphicsUnit.Point)
+        Label46.ForeColor = Color.Black
+        Label46.Location = New Point(184, 128)
+        Label46.Name = "Label46"
+        Label46.Size = New Size(53, 55)
+        Label46.TabIndex = 3
+        Label46.Text = "0"
+        ' 
+        ' Label47
+        ' 
+        Label47.AutoSize = True
+        Label47.ForeColor = Color.Black
+        Label47.Location = New Point(108, 46)
+        Label47.Name = "Label47"
+        Label47.Size = New Size(136, 27)
+        Label47.TabIndex = 2
+        Label47.Text = "Prêt Total"
+        ' 
+        ' Guna2ShadowPanel3
+        ' 
+        Guna2ShadowPanel3.BackColor = Color.Transparent
+        Guna2ShadowPanel3.Controls.Add(Label44)
+        Guna2ShadowPanel3.Controls.Add(Label45)
+        Guna2ShadowPanel3.FillColor = Color.White
+        Guna2ShadowPanel3.Location = New Point(0, 317)
+        Guna2ShadowPanel3.Name = "Guna2ShadowPanel3"
+        Guna2ShadowPanel3.ShadowColor = Color.Black
+        Guna2ShadowPanel3.Size = New Size(404, 200)
+        Guna2ShadowPanel3.TabIndex = 2
+        ' 
+        ' Label44
+        ' 
+        Label44.AutoSize = True
+        Label44.Font = New Font("Cooper Black", 36F, FontStyle.Regular, GraphicsUnit.Point)
+        Label44.ForeColor = Color.Black
+        Label44.Location = New Point(184, 128)
+        Label44.Name = "Label44"
+        Label44.Size = New Size(53, 55)
+        Label44.TabIndex = 3
+        Label44.Text = "0"
+        ' 
+        ' Label45
+        ' 
+        Label45.AutoSize = True
+        Label45.ForeColor = Color.Black
+        Label45.Location = New Point(108, 46)
+        Label45.Name = "Label45"
+        Label45.Size = New Size(159, 27)
+        Label45.TabIndex = 2
+        Label45.Text = "Livres Total"
+        ' 
+        ' Guna2ShadowPanel2
+        ' 
+        Guna2ShadowPanel2.BackColor = Color.Transparent
+        Guna2ShadowPanel2.Controls.Add(Label42)
+        Guna2ShadowPanel2.Controls.Add(Label43)
+        Guna2ShadowPanel2.FillColor = Color.White
+        Guna2ShadowPanel2.Location = New Point(843, 0)
+        Guna2ShadowPanel2.Name = "Guna2ShadowPanel2"
+        Guna2ShadowPanel2.ShadowColor = Color.Black
+        Guna2ShadowPanel2.Size = New Size(404, 200)
+        Guna2ShadowPanel2.TabIndex = 1
+        ' 
+        ' Label42
+        ' 
+        Label42.AutoSize = True
+        Label42.Font = New Font("Cooper Black", 36F, FontStyle.Regular, GraphicsUnit.Point)
+        Label42.ForeColor = Color.Black
+        Label42.Location = New Point(184, 128)
+        Label42.Name = "Label42"
+        Label42.Size = New Size(53, 55)
+        Label42.TabIndex = 3
+        Label42.Text = "0"
+        ' 
+        ' Label43
+        ' 
+        Label43.AutoSize = True
+        Label43.ForeColor = Color.Black
+        Label43.Location = New Point(108, 46)
+        Label43.Name = "Label43"
+        Label43.Size = New Size(183, 27)
+        Label43.TabIndex = 2
+        Label43.Text = "Auteurs Total"
+        ' 
+        ' Guna2ShadowPanel1
+        ' 
+        Guna2ShadowPanel1.BackColor = Color.Transparent
+        Guna2ShadowPanel1.Controls.Add(Label41)
+        Guna2ShadowPanel1.Controls.Add(Label40)
+        Guna2ShadowPanel1.FillColor = Color.White
+        Guna2ShadowPanel1.Location = New Point(5, 3)
+        Guna2ShadowPanel1.Name = "Guna2ShadowPanel1"
+        Guna2ShadowPanel1.ShadowColor = Color.Black
+        Guna2ShadowPanel1.Size = New Size(404, 200)
+        Guna2ShadowPanel1.TabIndex = 0
+        ' 
+        ' Label41
+        ' 
+        Label41.AutoSize = True
+        Label41.Font = New Font("Cooper Black", 36F, FontStyle.Regular, GraphicsUnit.Point)
+        Label41.ForeColor = Color.Black
+        Label41.Location = New Point(173, 109)
+        Label41.Name = "Label41"
+        Label41.Size = New Size(53, 55)
+        Label41.TabIndex = 1
+        Label41.Text = "0"
+        ' 
+        ' Label40
+        ' 
+        Label40.AutoSize = True
+        Label40.ForeColor = Color.Black
+        Label40.Location = New Point(97, 27)
+        Label40.Name = "Label40"
+        Label40.Size = New Size(188, 27)
+        Label40.TabIndex = 0
+        Label40.Text = "Lecteurs Total"
         ' 
         ' CliPage
         ' 
@@ -4174,6 +4327,7 @@ Partial Class DashBoardFormV2
         LoanCostBox.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         LoanCostBox.Increment = New Decimal(New Integer() {1500, 0, 0, 0})
         LoanCostBox.Location = New Point(33, 359)
+        LoanCostBox.Maximum = New Decimal(New Integer() {1410065408, 2, 0, 0})
         LoanCostBox.Name = "LoanCostBox"
         LoanCostBox.ShadowDecoration.CustomizableEdges = CustomizableEdges170
         LoanCostBox.Size = New Size(269, 36)
@@ -5431,6 +5585,15 @@ Partial Class DashBoardFormV2
         Guna2Panel1.ResumeLayout(False)
         Guna2TabControl1.ResumeLayout(False)
         SumPage.ResumeLayout(False)
+        SummaryPanel.ResumeLayout(False)
+        Guna2ShadowPanel4.ResumeLayout(False)
+        Guna2ShadowPanel4.PerformLayout()
+        Guna2ShadowPanel3.ResumeLayout(False)
+        Guna2ShadowPanel3.PerformLayout()
+        Guna2ShadowPanel2.ResumeLayout(False)
+        Guna2ShadowPanel2.PerformLayout()
+        Guna2ShadowPanel1.ResumeLayout(False)
+        Guna2ShadowPanel1.PerformLayout()
         CliPage.ResumeLayout(False)
         Guna2Panel4.ResumeLayout(False)
         CliTabControl.ResumeLayout(False)
@@ -5766,4 +5929,16 @@ Partial Class DashBoardFormV2
     Friend WithEvents Guna2DateTimePicker2 As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2ComboBox2 As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Guna2ShadowPanel4 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel3 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel2 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Label46 As Label
+    Friend WithEvents Label47 As Label
+    Friend WithEvents Label44 As Label
+    Friend WithEvents Label45 As Label
+    Friend WithEvents Label42 As Label
+    Friend WithEvents Label43 As Label
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Label40 As Label
 End Class

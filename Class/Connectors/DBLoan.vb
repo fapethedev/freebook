@@ -22,10 +22,10 @@ Public Class DBLoan
             loan = New Loan(
                 Convert.ToInt32(row("id")),
                 Convert.ToDateTime(row("loanstart")),
-                Convert.ToDateTime(row("loansend")),
+                Convert.ToDateTime(row("loanend")),
                 Convert.ToInt32(row("cost"))
                 ) With {
-                .SetUser = misc.GetUserById(Convert.ToInt32(row("id"))),
+                .SetUser = misc.GetUserById(Convert.ToInt32(row("user_id"))),
                 .SetBook = bookDB.GetBookById(Convert.ToInt32(row("book_id"))),
                 .SetClient = clientDB.GetClientById(Convert.ToInt32(row("client_id")))
             }

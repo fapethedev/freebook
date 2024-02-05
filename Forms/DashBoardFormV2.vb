@@ -38,12 +38,27 @@ Public Class DashBoardFormV2
 
         GridConfiguration()
 
+
+        Label41.Text = CliDataGridView.RowCount
+        Label42.Text = AuthorDataGridView.RowCount
+        Label44.Text = BookDataGridView.RowCount
+        Label46.Text = LoanDataGridView.RowCount
+
     End Sub
 
     Private Sub LocalTime_Tick(sender As Object, e As EventArgs) Handles LocalTime.Tick
 
         DashTimeLabel.Text = DateTime.Now.ToString("HH:mm:ss")
         DashDateLabel.Text = DateTime.Now.ToString("dd/MM/yyyy")
+
+    End Sub
+
+    Private Sub SomGrid()
+
+        Label41.Text = CliDataGridView.RowCount
+        Label42.Text = AuthorDataGridView.RowCount
+        Label44.Text = BookDataGridView.RowCount
+        Label46.Text = LoanDataGridView.RowCount
 
     End Sub
 
@@ -93,6 +108,7 @@ Public Class DashBoardFormV2
         AuthorDataGridConfiguration()
         EditorDataGridConfiguration()
         BookDataGridConfiguration()
+        LoanDataGridConfiguration()
 
     End Sub
 
@@ -193,6 +209,8 @@ Public Class DashBoardFormV2
                                                  MessageBox.Show("Vous venez de proceder à l'ajout d'un nouveau lecteur avec succes", "Ajout d'un nouveau lecteur", MessageBoxButtons.OK, MessageBoxIcon.Information)
                                                  CliDataGridConfiguration()
                                                  ClearAllCliAddFields()
+
+                                                 SomGrid()
 
                                              Else
 
@@ -327,6 +345,8 @@ Faites oui si vous êtes sur de votre choix dans le cas contraire faites non ou 
 
                                                  CliDataGridConfiguration()
 
+                                                 SomGrid()
+
                                              End If
 
                                          Else
@@ -412,6 +432,8 @@ Faites oui si vous êtes sur de votre choix dans le cas contraire faites non ou 
                                                  AuthorDataGridConfiguration()
                                                  RefreshBookAuthors()
                                                  ClearAllAuthorAddFields()
+
+                                                 SomGrid()
 
                                              Else
 
@@ -547,6 +569,8 @@ Faites oui si vous êtes sûre de votre choix dans le cas contraire faites non o
                                                  AuthorDataGridConfiguration()
                                                  RefreshBookAuthors()
 
+                                                 SomGrid()
+
                                              End If
 
                                          Else
@@ -593,7 +617,7 @@ Faites oui si vous êtes sûre de votre choix dans le cas contraire faites non o
         BookAddCoverBox.ImageLocation = ""
         BookAddTitleBox.Text = ""
         BookAddISBNBox.Text = ""
-        BookAddPubBox.Value = New DateTime()
+        'BookAddPubBox.Value = New Date()
         BookAddQteBox.Value = 0
         BookAddAuthorBox.SelectedIndex = -1
         BookAddEditorBox.SelectedIndex = -1
@@ -605,7 +629,7 @@ Faites oui si vous êtes sûre de votre choix dans le cas contraire faites non o
         BookModCoverPicBox.ImageLocation = ""
         BookModTitleBox.Text = ""
         BookModISBNBox.Text = ""
-        BookModPubBox.Value = New DateTime()
+        'BookModPubBox.Value = New Date()
         BookModQteBox.Value = 0
         BookModAuthorBox.SelectedIndex = -1
         BookModEditorBox.SelectedIndex = -1
@@ -680,8 +704,8 @@ Faites oui si vous êtes sure de votre choix dans le cas contraire faites non ou
                                              If resultat = DialogResult.Yes Then
 
                                                  Dim isAvailable = (BookModQteBox.Visible > 0)
-                                                 Dim bookAuthor As Author = BookAddAuthorBox.SelectedItem
-                                                 Dim bookEditor As Editor = BookAddEditorBox.SelectedItem
+                                                 Dim bookAuthor As Author = BookModAuthorBox.SelectedItem
+                                                 Dim bookEditor As Editor = BookModEditorBox.SelectedItem
 
                                                  Console.WriteLine(isAvailable)
 
@@ -702,6 +726,7 @@ Faites oui si vous êtes sure de votre choix dans le cas contraire faites non ou
 Nous vous prions de bien vouloir recommencer.
 Toutes les informations que vous avez inserer seront reinitialiser.", "Appliquez les modifications à un livre", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
+                                                     ClearAllBookModFields()
                                                  End If
 
                                              End If
@@ -780,6 +805,8 @@ Faites oui si vous êtes sûre de votre choix dans le cas contraire faites non o
                                                  dbBook.DelBook(book:=book)
 
                                                  BookDataGridConfiguration()
+
+                                                 SomGrid()
 
                                              End If
 
@@ -940,9 +967,10 @@ Faites oui si vous êtes sûre de votre choix dans le cas contraire faites non o
 
     Private Sub LoanDataGridConfiguration()
 
-        LoanDataGridView.DataSource = dbEditor.GetEditors
+        LoanDataGridView.DataSource = DBLoan.GetLoans
 
         LoanDataGridView.Columns("GetId").Visible = False
+        LoanDataGridView.Columns("GetCost").Visible = False
         LoanDataGridView.Columns("GetStartDate").HeaderText = "Début"
         LoanDataGridView.Columns("GetEndDate").HeaderText = "Fin"
         LoanDataGridView.Columns("GetUser").HeaderText = "Caissier"
@@ -953,8 +981,8 @@ Faites oui si vous êtes sûre de votre choix dans le cas contraire faites non o
 
     Private Sub ClearAllLoanAddFields()
 
-        LoanStartBox.Value = New Date
-        LoanEndBox.Value = New Date
+        'LoanStartBox.Value = New Date
+        'LoanEndBox.Value = New Date
         LoanBookBox.SelectedIndex = -1
         LoanCliBox.SelectedIndex = -1
         LoanCostBox.Value = 0
@@ -983,7 +1011,7 @@ Faites oui si vous êtes sûre de votre choix dans le cas contraire faites non o
 
     End Sub
 
-    Private Async Sub LoanAddButton_Click(sender As Object, e As EventArgs)
+    Private Async Sub LoanAddButton_Click(sender As Object, e As EventArgs) Handles LoanAddButton.Click
 
         Await Task.Run(Sub()
 
@@ -1006,15 +1034,15 @@ Faites oui si vous êtes sûre de votre choix dans le cas contraire faites non o
 
                                                  MessageBox.Show("Vous venez de proceder à la souscription d'un nouveau prêt", "Nouveau Prêt", MessageBoxButtons.OK, MessageBoxIcon.Information)
                                                  LoanDataGridConfiguration()
-                                                 ClearAllLoanAddFields()
+                                                 'ClearAllLoanAddFields()
 
                                              Else
 
                                                  MessageBox.Show("Une erreur inconnu est survenu lors de la souscription du nouveau prêt
-Nous vous prions de bien vouloir recommencer.
-Toutes les informations que vous spécifiées seront reinitialiser.",
-                                                                 "Echec du Prêt", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                                                 ClearAllLoanAddFields()
+                                             Nous vous prions de bien vouloir recommencer.
+                                             Toutes les informations que vous spécifiées seront reinitialiser.",
+                                                                "Echec du Prêt", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                                 'ClearAllLoanAddFields()
 
                                              End If
 
@@ -1070,6 +1098,7 @@ Toutes les informations que vous spécifiées seront reinitialiser.",
                        End Sub)
 
     End Sub
+
 
     '-----------------------------------------Fin prêt
 
